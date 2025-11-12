@@ -52,7 +52,7 @@ export default function Sidebar() {
   }, []);
 
   useEffect(() => {
-    const status = localStorage.getItem("isSuperadmin");
+    const status = sessionStorage.getItem("isSuperadmin");
     if (status === "true") setIsSuperadmin(true);
     else setIsSuperadmin(false);
   }, []);
@@ -77,7 +77,7 @@ export default function Sidebar() {
 
   const handleLogout = () => {
     sessionStorage.clear();
-    localStorage.clear();
+    sessionStorage.clear();
     toast.success("Anda berhasil logout");
     router.push("/");
   };

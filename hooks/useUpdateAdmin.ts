@@ -60,8 +60,8 @@ export function useUpdateAdmin() {
         {
           method: "PUT",
           headers: {
-            accept: "*/*",
-            access_token: tokenAkses,
+            Accept: "*/*",
+            Authorization: `Bearer ${tokenAkses}`,
             user_id: userId,
             id_admin: payload.id_admin,
           },

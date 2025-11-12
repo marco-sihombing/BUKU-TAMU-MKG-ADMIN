@@ -104,8 +104,9 @@ export default function DashboardPage() {
           "https://buku-tamu-mkg-database.vercel.app/api/admin/buku-tamu";
 
         const headers = {
-          accept: "*/*",
-          access_token: token,
+          "Content-Type": "application/json",
+          Accept: "*/*",
+          Authorization: `Bearer ${token}`,
           user_id: userID,
         };
 

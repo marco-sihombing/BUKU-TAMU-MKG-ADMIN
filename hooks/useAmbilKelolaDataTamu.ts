@@ -116,8 +116,9 @@ export function useAmbilDataTamu(filterOptions: FilterOptions = {}) {
       const respons = await fetch(url, {
         method: "GET",
         headers: {
-          accept: "*/*",
-          access_token: tokenAkses,
+          "Content-Type": "application/json",
+          Accept: "*/*",
+          Authorization: `Bearer ${tokenAkses}`,
           user_id: idPengguna,
           "content-type": "application/json",
         },
